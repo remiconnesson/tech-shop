@@ -9,6 +9,13 @@ export async function getContentfulProductsAction(): Promise<
   ActionState<ProductData>
 > {
   try {
+    if (!contentfulClient) {
+      return {
+        isSuccess: false,
+        message: "Contentful is not configured. Please set CONTENTFUL_SPACE_ID and CONTENTFUL_ACCESS_TOKEN environment variables.",
+      };
+    }
+
     const entries = await contentfulClient.getEntries({
       content_type: "product",
       include: 2,
@@ -36,6 +43,13 @@ export async function getContentfulProductByIdAction(
   id: string
 ): Promise<ActionState<{ product: Product }>> {
   try {
+    if (!contentfulClient) {
+      return {
+        isSuccess: false,
+        message: "Contentful is not configured. Please set CONTENTFUL_SPACE_ID and CONTENTFUL_ACCESS_TOKEN environment variables.",
+      };
+    }
+
     const entries = await contentfulClient.getEntries({
       content_type: "product",
       "fields.id": id,

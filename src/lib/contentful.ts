@@ -1,11 +1,21 @@
-import { createClient } from "contentful";
+import { createClient, type ContentfulClientApi } from "contentful";
 
-// Initialize Contentful client for published content
-export const contentfulClient = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID || "",
-  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || "",
-  environment: process.env.CONTENTFUL_ENVIRONMENT || "master",
-});
+// Initialize Contentful client for published content (only if credentials are available)
+const spaceId = process.env.CONTENTFUL_SPACE_ID;
+const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
+
+export const contentfulClient: ContentfulClientApi<undefined> | null =
+  spaceId && accessToken
+    ? createClient({
+        space: spaceId,
+        accessToken: accessToken,
+        environment: process.env.CONTENTFUL_ENVIRONMENT || "master",
+      })
+    : null;
+
+export const isContentfulConfigured = (): boolean => {
+  return contentfulClient !== null;
+};
 
 // Type for Contentful product
 export interface ContentfulProduct {
