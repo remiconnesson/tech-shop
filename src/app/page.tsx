@@ -40,7 +40,7 @@ export default async function Home() {
         {/* Blog Preview Section */}
         <Suspense
           fallback={
-            <section className="bg-yellow-400 border-y-4 border-black py-16">
+            <section className="bg-purple-500 border-y-4 border-black py-16">
               <div className="container mx-auto px-4">
                 <h2 className="font-black text-4xl uppercase mb-12">
                   Latest from the Blog
@@ -71,9 +71,9 @@ export default async function Home() {
               <input
                 type="email"
                 placeholder="Your email"
-                className="flex-1 border-4 border-black px-4 py-3 font-mono focus:outline-none focus:ring-4 focus:ring-yellow-400"
+                className="flex-1 border-4 border-black px-4 py-3 font-mono focus:outline-none focus:ring-4 focus:ring-purple-500"
               />
-              <Button className="bg-black text-white border-4 border-black px-8 py-3 font-black uppercase rounded-none hover:bg-yellow-400 hover:text-black transition-colors">
+              <Button className="bg-black text-white border-4 border-black px-8 py-3 font-black uppercase rounded-none hover:bg-purple-500 hover:text-white transition-colors">
                 Subscribe
               </Button>
             </div>

@@ -30,7 +30,7 @@ export function DebugContentSourceMaps({
       <div className="font-bold mb-1">🔍 Content Source Maps Debug</div>
       <div className="space-y-1">
         <div>
-          Field: <span className="text-yellow-400">{fieldName}</span>
+          Field: <span className="text-purple-400">{fieldName}</span>
         </div>
         <div>
           Metadata:{" "}

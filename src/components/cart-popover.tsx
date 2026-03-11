@@ -20,12 +20,12 @@ export default function CartPopover() {
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <button
-          className="relative cursor-pointer p-2 hover:bg-yellow-400 transition-colors border-2 border-transparent hover:border-black"
+          className="relative cursor-pointer p-2 hover:bg-purple-500 transition-colors border-2 border-transparent hover:border-black"
           aria-label="Open cart"
         >
           <ShoppingCart className="w-6 h-6" />
           {totalItems > 0 && (
-            <span className="absolute -top-1 -right-1 bg-yellow-400 text-black border-2 border-black rounded-full w-6 h-6 flex items-center justify-center text-xs font-black">
+            <span className="absolute -top-1 -right-1 bg-purple-500 text-white border-2 border-black rounded-full w-6 h-6 flex items-center justify-center text-xs font-black">
               {totalItems}
             </span>
           )}
@@ -57,7 +57,7 @@ export default function CartPopover() {
               Your cart is empty
             </p>
             <Link href="/" onClick={() => setOpen(false)}>
-              <Button className="mt-4 bg-black text-white border-2 border-black px-4 py-2 font-bold uppercase text-sm rounded-none hover:bg-yellow-400 hover:text-black transition-colors">
+              <Button className="mt-4 bg-black text-white border-2 border-black px-4 py-2 font-bold uppercase text-sm rounded-none hover:bg-purple-500 hover:text-white transition-colors">
                 Shop Now
               </Button>
             </Link>
@@ -94,7 +94,7 @@ export default function CartPopover() {
               ))}
             </div>
 
-            <div className="border-t-4 border-black bg-yellow-400 p-4">
+            <div className="border-t-4 border-black bg-purple-500 text-white p-4">
               <div className="flex justify-between items-center mb-4">
                 <span className="font-bold uppercase text-sm">Total</span>
                 <span className="font-black text-xl">
