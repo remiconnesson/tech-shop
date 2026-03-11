@@ -149,7 +149,7 @@ export default async function ProductPage({
                 <li>Warranty Included</li>
               </ul>
             </div>
-            <div className="border-4 border-black p-6 bg-cyan-400">
+            <div className="border-4 border-black p-6 bg-purple-400">
               <h3 className="font-black text-xl uppercase mb-4">Specifications</h3>
               <ul className="space-y-2 font-mono">
                 <li>

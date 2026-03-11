@@ -64,10 +64,10 @@ export function Hero({
           {/* Geometric Shapes */}
           <div className="relative h-64 md:h-96">
             <div className="absolute top-0 left-0 w-32 h-32 bg-yellow-400 border-4 border-black"></div>
-            <div className="absolute top-8 left-8 w-32 h-32 bg-cyan-400 border-4 border-black"></div>
+            <div className="absolute top-8 left-8 w-32 h-32 bg-purple-500 border-4 border-black"></div>
             <div className="absolute top-16 left-16 w-32 h-32 bg-black border-4 border-black"></div>
             <div className="absolute bottom-0 right-0 w-24 h-24 bg-yellow-400 border-4 border-black rotate-45"></div>
-            <div className="absolute bottom-8 right-8 w-24 h-24 bg-cyan-400 border-4 border-black rotate-45"></div>
+            <div className="absolute bottom-8 right-8 w-24 h-24 bg-purple-500 border-4 border-black rotate-45"></div>
           </div>
         </div>
       </div>
